@@ -5,8 +5,8 @@ Follow these steps to get the project up and running locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/university-rest-api-assignment.git
-cd university-rest-api-assignment
+git clone https://github.com/your-username/Spring-Boot_Assignment2.git
+cd Spring-Boot_Assignment2
 
 ```
 
