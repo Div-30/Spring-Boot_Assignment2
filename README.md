@@ -1,6 +1,6 @@
 ## Project Overview
 
-This repository contains a monolithic REST API built with Java and Spring Boot. It was developed as part of a university assignment to demonstrate proficiency in building scalable, RESTful web services. The application aggregates multiple domain-specific modules—Library, Student Management, Restaurant Menu, E-Commerce, Task Management, and User Profiles—into a single unified codebase.
+This repository contains a monolithic REST API built with Spring Boot. It was developed as part of a university assignment to demonstrate proficiency in building scalable, RESTful web services. The application aggregates multiple domain-specific modules—Library, Student Management, Restaurant Menu, E-Commerce, Task Management, and User Profiles—into a single unified codebase.
 
 Each module represents a specific problem statement from the assignment, showcasing different aspects of REST API design, including CRUD operations, complex filtering, pagination, and custom response wrapping.
 
