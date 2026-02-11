@@ -1,16 +1,3 @@
-## Project Overview
-
-This repository contains a monolithic REST API built with Spring Boot. It was developed as part of a university assignment to demonstrate proficiency in building scalable, RESTful web services. The application aggregates multiple domain-specific modules—Library, Student Management, Restaurant Menu, E-Commerce, Task Management, and User Profiles—into a single unified codebase.
-
-Each module represents a specific problem statement from the assignment, showcasing different aspects of REST API design, including CRUD operations, complex filtering, pagination, and custom response wrapping.
-
-## Tech Stack
-
-* **Language:** Java 17
-* **Framework:** Spring Boot 
-* **Build Tool:** Maven
-* **Testing:** Postman
-
 ## Setup & Installation
 
 Follow these steps to get the project up and running locally.
@@ -59,33 +46,6 @@ A system to manage library inventory, including adding books and searching by ti
 | `POST` | `/api/books` | Add a new book to the library. |
 | `DELETE` | `/api/books/{id}` | Remove a book from the library. |
 
-#### **Example: Add a New Book (POST)**
-
-```json
-{
-  "title": "Clean Code",
-  "author": "Robert Martin",
-  "isbn": "978-0132350884",
-  "publicationYear": 2008
-}
-
-```
-
-#### **Example: Success Response (GET)**
-
-```json
-[
-  {
-    "id": 1,
-    "title": "Clean Code",
-    "author": "Robert Martin",
-    "isbn": "978-0132350884",
-    "publicationYear": 2008
-  }
-]
-
-```
-
 ---
 
 ### Question 2: Student Registration API
@@ -102,33 +62,6 @@ Manages student records with capabilities to filter by major and GPA.
 | `GET` | `/api/students/filter?gpa={minGpa}` | Filter students with GPA ≥ specific value. |
 | `POST` | `/api/students` | Register a new student. |
 | `PUT` | `/api/students/{studentId}` | Update an existing student's info. |
-
-#### **Example: Register Student (POST)**
-
-```json
-{
-  "firstName": "Alice",
-  "lastName": "Johnson",
-  "email": "alice.j@university.edu",
-  "major": "Computer Science",
-  "gpa": 3.8
-}
-
-```
-
-#### **Example: Success Response (GET)**
-
-```json
-{
-  "studentId": 101,
-  "firstName": "Alice",
-  "lastName": "Johnson",
-  "email": "alice.j@university.edu",
-  "major": "Computer Science",
-  "gpa": 3.8
-}
-
-```
 
 ---
 
@@ -148,33 +81,6 @@ Handles restaurant menu items, allowing filtering by category and availability s
 | `POST` | `/api/menu` | Add a new item to the menu. |
 | `PUT` | `/api/menu/{id}/availability` | Toggle item availability. |
 | `DELETE` | `/api/menu/{id}` | Remove an item from the menu. |
-
-#### **Example: Add Menu Item (POST)**
-
-```json
-{
-  "name": "Spicy Ramen",
-  "description": "Japanese noodle soup with spicy broth",
-  "price": 12.99,
-  "category": "Main Course",
-  "available": true
-}
-
-```
-
-#### **Example: Success Response (GET)**
-
-```json
-{
-  "id": 5,
-  "name": "Spicy Ramen",
-  "description": "Japanese noodle soup with spicy broth",
-  "price": 12.99,
-  "category": "Main Course",
-  "available": true
-}
-
-```
 
 ---
 
@@ -198,35 +104,6 @@ A robust product catalog API supporting pagination, price ranges, and stock mana
 | `PATCH` | `/api/products/{productId}/stock` | Update stock quantity (`?quantity={qty}`). |
 | `DELETE` | `/api/products/{productId}` | Delete a product. |
 
-#### **Example: Add Product (POST)**
-
-```json
-{
-  "name": "Wireless Headphones",
-  "description": "Noise cancelling over-ear headphones",
-  "price": 299.99,
-  "category": "Electronics",
-  "stockQuantity": 50,
-  "brand": "AudioTech"
-}
-
-```
-
-#### **Example: Success Response (GET)**
-
-```json
-{
-  "productId": 204,
-  "name": "Wireless Headphones",
-  "description": "Noise cancelling over-ear headphones",
-  "price": 299.99,
-  "category": "Electronics",
-  "stockQuantity": 50,
-  "brand": "AudioTech"
-}
-
-```
-
 ---
 
 ### Question 5: Task Management API
@@ -246,32 +123,6 @@ A "To-Do" list application for managing tasks, priorities, and deadlines.
 | `PATCH` | `/api/tasks/{taskId}/complete` | Mark a task as completed. |
 | `DELETE` | `/api/tasks/{taskId}` | Delete a task. |
 
-#### **Example: Create Task (POST)**
-
-```json
-{
-  "title": "Complete Java Assignment",
-  "description": "Finish the 6 API questions for the university project",
-  "priority": "HIGH",
-  "dueDate": "2023-12-15"
-}
-
-```
-
-#### **Example: Success Response (GET)**
-
-```json
-{
-  "taskId": 10,
-  "title": "Complete Java Assignment",
-  "description": "Finish the 6 API questions for the university project",
-  "completed": false,
-  "priority": "HIGH",
-  "dueDate": "2023-12-15"
-}
-
-```
-
 ---
 
 ### Bonus: User Profile API (Wrapped Response)
@@ -286,39 +137,3 @@ A user management system that returns data wrapped in a custom `ApiResponse` obj
 | `GET` | `/api/users/search?username={name}` | Search user by username. |
 | `POST` | `/api/users` | Create a new user profile. |
 | `PUT` | `/api/users/{userId}/activate` | Activate/Deactivate a user profile. |
-
-#### **Example: Create User Profile (POST)**
-
-```json
-{
-  "username": "john_doe",
-  "email": "john@example.com",
-  "fullName": "John Doe",
-  "age": 25,
-  "country": "USA",
-  "bio": "Software Developer Student"
-}
-
-```
-
-#### **Example: Standardized Response Wrapper (Output)**
-
-All responses in this module follow this structure:
-
-```json
-{
-  "success": true,
-  "message": "User profile created successfully",
-  "data": {
-    "userId": 1,
-    "username": "john_doe",
-    "email": "john@example.com",
-    "fullName": "John Doe",
-    "age": 25,
-    "country": "USA",
-    "bio": "Software Developer Student",
-    "active": true
-  }
-}
-
-```
