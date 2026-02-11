@@ -15,13 +15,6 @@ public class StudentController {
 
     private List<Student> students = new ArrayList<>();
     
-    public StudentController() {
-        students.add(new Student(1L, "John", "Doe", "john@example.com", "Computer Science", 3.8));
-        students.add(new Student(2L, "Jane", "Smith", "jane@example.com", "Mathematics", 3.2));
-        students.add(new Student(3L, "Alice", "Johnson", "alice@example.com", "Physics", 3.9));
-        students.add(new Student(4L, "Bob", "Brown", "bob@example.com", "Computer Science", 2.5));
-        students.add(new Student(5L, "Charlie", "Davis", "charlie@example.com", "Computer Science", 3.6));
-    }
 
     @GetMapping
     public ResponseEntity<List<Student>> getAllStudents() {

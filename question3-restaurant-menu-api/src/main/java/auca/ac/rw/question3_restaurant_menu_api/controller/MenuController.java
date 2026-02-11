@@ -14,24 +14,7 @@ public class MenuController {
 
     private List<MenuItem> menu = new ArrayList<>();
 
-    public MenuController() {
-        // Appetizers
-        menu.add(new MenuItem(1L, "Spring Rolls", "Crispy veggie rolls with chili dip", 5.50, "Appetizer", true));
-        menu.add(new MenuItem(2L, "Garlic Bread", "Toasted baguette with garlic butter", 4.00, "Appetizer", true));
-        
-        // Main Courses
-        menu.add(new MenuItem(3L, "Grilled Salmon", "Fresh salmon with asparagus", 18.99, "Main Course", true));
-        menu.add(new MenuItem(4L, "Cheeseburger", "Beef patty with cheddar and fries", 12.50, "Main Course", false)); 
-        
-        // Desserts
-        menu.add(new MenuItem(5L, "Chocolate Lava Cake", "Warm cake with molten center", 7.00, "Dessert", true));
-        menu.add(new MenuItem(6L, "Fruit Salad", "Seasonal fresh fruits", 6.50, "Dessert", true));
-
-        // Beverages
-        menu.add(new MenuItem(7L, "Iced Lemon Tea", "Refreshing homemade tea", 3.50, "Beverage", true));
-        menu.add(new MenuItem(8L, "Cappuccino", "Italian coffee with foam", 4.50, "Beverage", true));
-    }
-
+    
     @GetMapping
     public ResponseEntity<List<MenuItem>> getAllMenu() {
         return new ResponseEntity<>(menu, HttpStatus.OK);

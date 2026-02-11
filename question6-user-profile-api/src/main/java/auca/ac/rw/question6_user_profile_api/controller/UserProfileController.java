@@ -16,14 +16,6 @@ public class UserProfileController {
 
     private List<UserProfile> users = new ArrayList<>();
 
-    public UserProfileController() {
-        // Pre-loading sample users
-        users.add(new UserProfile(1L, "john_doe", "john@example.com", "John Doe", 25, "USA", "Software Developer", true));
-        users.add(new UserProfile(2L, "jane_smith", "jane@example.com", "Jane Smith", 30, "UK", "Data Scientist", true));
-        users.add(new UserProfile(3L, "mike_rwanda", "mike@example.com", "Mike Keza", 22, "Rwanda", "Student", false));
-        users.add(new UserProfile(4L, "alice_fr", "alice@example.com", "Alice Dupont", 28, "France", "Artist", true));
-        users.add(new UserProfile(5L, "david_music", "david@example.com", "David Rock", 35, "USA", "Musician", true));
-    }
 
     @GetMapping
     public ResponseEntity<ApiResponse<List<UserProfile>>> getAllUsers() {

@@ -15,19 +15,6 @@ public class ProductController {
 
     private List<Product> products = new ArrayList<>();
 
-    public ProductController() {
-        products.add(new Product(1L, "iPhone 15", "Latest Apple smartphone", 999.99, "Electronics", 50, "Apple"));
-        products.add(new Product(2L, "Galaxy S24", "Samsung flagship phone", 899.99, "Electronics", 45, "Samsung"));
-        products.add(new Product(3L, "MacBook Air", "Lightweight laptop M2", 1199.00, "Computers", 20, "Apple"));
-        products.add(new Product(4L, "Dell XPS 13", "High performance laptop", 1050.50, "Computers", 15, "Dell"));
-        products.add(new Product(5L, "Sony WH-1000XM5", "Noise cancelling headphones", 349.99, "Audio", 30, "Sony"));
-        products.add(new Product(6L, "JBL Flip 6", "Portable bluetooth speaker", 129.99, "Audio", 0, "JBL"));
-        products.add(new Product(7L, "Nike Air Max", "Running shoes", 120.00, "Clothing", 100, "Nike"));
-        products.add(new Product(8L, "Adidas Hoodie", "Cotton casual hoodie", 65.00, "Clothing", 80, "Adidas"));
-        products.add(new Product(9L, "PlayStation 5", "Gaming console", 499.99, "Gaming", 10, "Sony"));
-        products.add(new Product(10L, "Logitech G502", "Gaming mouse", 49.99, "Gaming", 60, "Logitech"));
-    }
-
     @GetMapping
     public ResponseEntity<List<Product>> getAllProducts() {
         return new ResponseEntity<>(products, HttpStatus.OK);

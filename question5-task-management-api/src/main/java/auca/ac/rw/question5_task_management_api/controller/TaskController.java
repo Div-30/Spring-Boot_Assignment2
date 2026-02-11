@@ -14,14 +14,6 @@ public class TaskController {
 
     private List<Task> tasks = new ArrayList<>();
 
-    public TaskController() {
-        // Pre-loading sample tasks
-        tasks.add(new Task(1L, "Complete Assignment", "Finish Spring Boot questions", false, "HIGH", "2024-02-15"));
-        tasks.add(new Task(2L, "Grocery Shopping", "Buy milk and bread", false, "MEDIUM", "2024-02-10"));
-        tasks.add(new Task(3L, "Call Mom", "Weekly catch up", true, "LOW", "2024-02-09"));
-        tasks.add(new Task(4L, "Prepare Presentation", "Slides for Monday meeting", false, "HIGH", "2024-02-12"));
-        tasks.add(new Task(5L, "Clean Room", "Organize desk and shelves", true, "LOW", "2024-02-08"));
-    }
 
     @GetMapping
     public ResponseEntity<List<Task>> getAllTasks() {

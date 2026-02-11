@@ -14,11 +14,6 @@ import auca.ac.rw.question1_library_api.model.Book;
 public class BookController {
     List<Book> books = new ArrayList<>();
 
-    public BookController() {
-        books.add(new Book(1L, "The Great Gatsby", "F. Scott Fitzgerald", "978-0743273565", 1925));
-        books.add(new Book(2L, "To Kill a Mockingbird", "Harper Lee", "978-0061120084", 1960));
-        books.add(new Book(3L, "1984", "George Orwell", "978-0451524935", 1949));
-    }
 
     @GetMapping
     public ResponseEntity<List<Book>> getAllBooks() {
