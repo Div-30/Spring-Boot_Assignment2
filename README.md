@@ -137,3 +137,10 @@ A user management system that returns data wrapped in a custom `ApiResponse` obj
 | `GET` | `/api/users/search?username={name}` | Search user by username. |
 | `POST` | `/api/users` | Create a new user profile. |
 | `PUT` | `/api/users/{userId}/activate` | Activate/Deactivate a user profile. |
+
+### Testing Evidence
+Per the assignment requirements, testing has been performed using Postman/cURL for all endpoints.
+
+**- Screenshots:** Evidence of successful API calls and their outputs can be found in the screenshots/ directory at the root of this project.
+
+**- Coverage:** The screenshots cover success scenarios (200 OK, 201 Created) as well as error handling (404 Not Found, 400 Bad Request) for all 6 questions.
