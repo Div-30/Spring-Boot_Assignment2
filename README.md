@@ -139,7 +139,7 @@ A user management system that returns data wrapped in a custom `ApiResponse` obj
 | `PUT` | `/api/users/{userId}/activate` | Activate/Deactivate a user profile. |
 
 ### Testing Evidence
-Per the assignment requirements, testing has been performed using Postman/cURL for all endpoints.
+Per the assignment requirements, testing has been performed using Postman for all endpoints.
 
 **- Screenshots:** Evidence of successful API calls and their outputs can be found in the screenshots/ directory at the root of this project.
 
